@@ -19,7 +19,7 @@ export default function Main() {
             'param1':'value1',
             'param2':'value2'
         });
-        axios.get('/test/get' + (params ? `?${params.toString()}` : ''))
+        axios.get('/api/get' + (params ? `?${params.toString()}` : ''))
         .then(res => {
             console.log(res);
             const {data} = res.data;
@@ -38,7 +38,7 @@ export default function Main() {
             param1: 'value1',
             param2: 'value2'
         }
-        axios.post('/test/post', params)
+        axios.post('/api/post', params)
         .then(res => {
             console.log(res);
             const {data} = res.data;
