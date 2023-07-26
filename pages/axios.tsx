@@ -8,7 +8,7 @@ import { FileUploader } from 'react-drag-drop-files';
  *
  * @constructor
  */
-export default function Main() {
+export default function Axios() {
 
     // get
     const [getResult, setGetResult] = useState('');
@@ -63,7 +63,7 @@ export default function Main() {
         const headers = {
             'Content-type': 'multipart/form-data',
         }
-        axios.post('/api/file', {'file': file}, {headers})
+        axios.post('/api/readExcelFile', {'file': file}, {headers})
         .then((res) => {
             console.log(res.data);
         })
@@ -71,7 +71,6 @@ export default function Main() {
             console.error(e);
         });
     };
-
 
     return <div>
         <h1>Hello, Axios!</h1>
